@@ -1,0 +1,174 @@
+openapi: 3.0.3
+info:
+  title: Blog API
+  description: API for managing blogs
+  version: 1.0.0
+servers:
+  - url: /api/v1
+    description: Blog API server
+
+tags:
+  - name: Blogs
+    description: CRUD operations for Blogs
+
+paths:
+  /blogs:
+    post:
+      tags:
+        - Blogs
+      summary: Create a new blog
+      operationId: createBlog
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BlogRequest'
+      responses:
+        '201':
+          description: Blog created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BlogDetail'
+        '400':
+          description: Bad request
+    get:
+      tags:
+        - Blogs
+      summary: Get all blogs
+      operationId: getAllBlogs
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BlogDetailPaginated'
+
+  /blogs/{id}:
+    get:
+      tags:
+        - Blogs
+      summary: Get blog by ID
+      operationId: getBlogById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BlogDetail'
+        '404':
+          description: Blog not found
+    put:
+      tags:
+        - Blogs
+      summary: Update a blog
+      operationId: updateBlog
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BlogRequest'
+      responses:
+        '200':
+          description: Blog updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BlogDetail'
+        '400':
+          description: Bad request
+        '404':
+          description: Blog not found
+    delete:
+      tags:
+        - Blogs
+      summary: Delete a blog
+      operationId: deleteBlog
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Blog deleted successfully
+        '404':
+          description: Blog not found
+
+components:
+  schemas:
+    BlogRequest:
+      type: object
+      required:
+        - title
+        - description
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+    BlogDetail:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        user_id:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    BlogDetailPaginated:
+      type: object
+      properties:
+        contents:
+          type: array
+          items:
+            $ref: '#/components/schemas/BlogDetail'
+        total:
+          type: integer
+          format: int64
+        total_pages:
+          type: integer
+        current_page:
+          type: integer
+        has_next:
+          type: boolean
+        has_previous:
+          type: boolean
+        is_last:
+          type: boolean

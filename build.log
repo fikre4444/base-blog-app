@@ -1,0 +1,230 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.fikre.tesfay:sample-service >-------------------
+[INFO] Building sample-service 1.1.10
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- openapi-generator:6.2.1:generate (auth-api-v1) @ sample-service ---
+[INFO] Generating with dryRun=false
+[INFO] No .openapi-generator-ignore file found.
+[INFO] OpenAPI Generator: spring (server)
+[INFO] Generator 'spring' is considered stable.
+[INFO] ----------------------------------
+[INFO] Environment variable JAVA_POST_PROCESS_FILE not defined so the Java code may not be properly formatted. To define it, try 'export JAVA_POST_PROCESS_FILE="/usr/local/bin/clang-format -i"' (Linux/Mac)
+[INFO] NOTE: To enable file post-processing, 'enablePostProcessFile' must be set to `true` (--enable-post-process-file for CLI).
+[INFO] Inline schema created as login_request. To have complete control of the model name, set the `title` field or use the inlineSchemaNameMapping option (--inline-schema-name-mappings in CLI).
+[INFO] Inline schema created as refresh_request. To have complete control of the model name, set the `title` field or use the inlineSchemaNameMapping option (--inline-schema-name-mappings in CLI).
+[INFO] Inline schema created as resetPassword_request. To have complete control of the model name, set the `title` field or use the inlineSchemaNameMapping option (--inline-schema-name-mappings in CLI).
+[INFO] Inline schema created as updatePassword_request. To have complete control of the model name, set the `title` field or use the inlineSchemaNameMapping option (--inline-schema-name-mappings in CLI).
+[INFO] Inline schema created as UserDetailPaginated_allOf. To have complete control of the model name, set the `title` field or use the inlineSchemaNameMapping option (--inline-schema-name-mappings in CLI).
+[INFO] Processing operation login
+[INFO] Processing operation register
+[INFO] Processing operation refresh
+[INFO] Processing operation currentUser
+[INFO] Processing operation verifyUser
+[INFO] Processing operation resetPassword
+[INFO] Processing operation updatePassword
+[INFO] Processing operation sendVerify
+[INFO] Processing operation forgotPassword
+[INFO] Processing operation getAllUsers
+[INFO] Processing operation disableSelfUser
+[INFO] Processing operation getUserById
+[INFO] Processing operation updateUser
+[INFO] Processing operation enableUserAvailability
+[INFO] Processing operation healthCheck
+[WARNING] Unknown `format` int64 detected for type `number`. Defaulting to `number`
+[WARNING] Unknown `format` int64 detected for type `number`. Defaulting to `number`
+[WARNING] Unknown `format` int64 detected for type `number`. Defaulting to `number`
+[WARNING] Unknown `format` int64 detected for type `number`. Defaulting to `number`
+[WARNING] Unknown `format` int64 detected for type `number`. Defaulting to `number`
+[WARNING] Unknown `format` int64 detected for type `number`. Defaulting to `number`
+[WARNING] Unknown `format` int64 detected for type `number`. Defaulting to `number`
+[WARNING] Unknown `format` int64 detected for type `number`. Defaulting to `number`
+[WARNING] Unknown `format` int64 detected for type `number`. Defaulting to `number`
+[WARNING] Unknown `format` int64 detected for type `number`. Defaulting to `number`
+[WARNING] Unknown `format` int64 detected for type `number`. Defaulting to `number`
+[WARNING] Unknown `format` int64 detected for type `number`. Defaulting to `number`
+[WARNING] allOf with multiple schemas defined. Using only the first one: Paginated
+[INFO] Model login_request not generated since it's marked as unused (due to form parameters) and `skipFormModel` (global property) set to true (default)
+[INFO] Model refresh_request not generated since it's marked as unused (due to form parameters) and `skipFormModel` (global property) set to true (default)
+[INFO] Model updatePassword_request not generated since it's marked as unused (due to form parameters) and `skipFormModel` (global property) set to true (default)
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\Credential.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\Credential.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\ErrorResponse.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\ErrorResponse.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\Paginated.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\Paginated.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\RegisterUserRequest.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\RegisterUserRequest.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\ResetPasswordRequest.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\ResetPasswordRequest.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\Token.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\Token.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\UserDetail.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\UserDetail.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\UserDetailPaginated.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\UserDetailPaginated.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\UserDetailPaginatedAllOf.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\UserDetailPaginatedAllOf.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\UserRequest.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\model\UserRequest.java
+[WARNING] allOf with multiple schemas defined. Using only the first one: Paginated
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\AuthsApiController.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\AuthsApiController.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\AuthsApi.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\AuthsApi.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\AuthsApiDelegate.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\AuthsApiDelegate.java
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\pom.xml (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\README.md (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\OpenApiGeneratorApplication.java (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\src\test\java\com\sample\sampleservice\feature\auth\OpenApiGeneratorApplicationTests.java (Skipped by supportingFiles options supplied by user.)
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\RFC3339DateFormat.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\RFC3339DateFormat.java
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\src\main\resources\application.properties (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\HomeController.java (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\src\main\resources\openapi.yaml (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\SpringDocConfiguration.java (Skipped by supportingFiles options supplied by user.)
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\ApiUtil.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\auth\api\rest\v1\ApiUtil.java
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator-ignore (Skipped by supportingFiles options supplied by user.)
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator\VERSION
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator\VERSION
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator\FILES
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator\FILES
+################################################################################
+# Thanks for using OpenAPI Generator.                                          #
+# Please consider donation to help us maintain this project 🙏                 #
+# https://opencollective.com/openapi_generator/donate                          #
+################################################################################
+[INFO] 
+[INFO] --- openapi-generator:6.2.1:generate (sample-api-v1) @ sample-service ---
+[INFO] Generating with dryRun=false
+[INFO] No .openapi-generator-ignore file found.
+[INFO] OpenAPI Generator: spring (server)
+[INFO] Generator 'spring' is considered stable.
+[INFO] ----------------------------------
+[INFO] Environment variable JAVA_POST_PROCESS_FILE not defined so the Java code may not be properly formatted. To define it, try 'export JAVA_POST_PROCESS_FILE="/usr/local/bin/clang-format -i"' (Linux/Mac)
+[INFO] NOTE: To enable file post-processing, 'enablePostProcessFile' must be set to `true` (--enable-post-process-file for CLI).
+[INFO] Processing operation sayHello
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\sample\infrastructure\primary\api\rest\v1\SampleApiController.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\sample\infrastructure\primary\api\rest\v1\SampleApiController.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\sample\infrastructure\primary\api\rest\v1\SampleApi.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\sample\infrastructure\primary\api\rest\v1\SampleApi.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\sample\infrastructure\primary\api\rest\v1\SampleApiDelegate.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\sample\infrastructure\primary\api\rest\v1\SampleApiDelegate.java
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\pom.xml (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\README.md (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\sample\infrastructure\primary\OpenApiGeneratorApplication.java (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\src\test\java\com\sample\sampleservice\sample\infrastructure\primary\OpenApiGeneratorApplicationTests.java (Skipped by supportingFiles options supplied by user.)
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\sample\infrastructure\primary\RFC3339DateFormat.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\sample\infrastructure\primary\RFC3339DateFormat.java
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\src\main\resources\application.properties (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\sample\infrastructure\primary\HomeController.java (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\src\main\resources\openapi.yaml (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\sample\infrastructure\primary\SpringDocConfiguration.java (Skipped by supportingFiles options supplied by user.)
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\sample\infrastructure\primary\api\rest\v1\ApiUtil.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\sample\infrastructure\primary\api\rest\v1\ApiUtil.java
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator-ignore (Skipped by supportingFiles options supplied by user.)
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator\VERSION
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator\VERSION
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator\FILES
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator\FILES
+################################################################################
+# Thanks for using OpenAPI Generator.                                          #
+# Please consider donation to help us maintain this project 🙏                 #
+# https://opencollective.com/openapi_generator/donate                          #
+################################################################################
+[INFO] 
+[INFO] --- openapi-generator:6.2.1:generate (blog-api-v1) @ sample-service ---
+[INFO] Generating with dryRun=false
+[INFO] No .openapi-generator-ignore file found.
+[INFO] OpenAPI Generator: spring (server)
+[INFO] Generator 'spring' is considered stable.
+[INFO] ----------------------------------
+[INFO] Environment variable JAVA_POST_PROCESS_FILE not defined so the Java code may not be properly formatted. To define it, try 'export JAVA_POST_PROCESS_FILE="/usr/local/bin/clang-format -i"' (Linux/Mac)
+[INFO] NOTE: To enable file post-processing, 'enablePostProcessFile' must be set to `true` (--enable-post-process-file for CLI).
+[INFO] Processing operation getAllBlogs
+[INFO] Processing operation createBlog
+[INFO] Processing operation getBlogById
+[INFO] Processing operation updateBlog
+[INFO] Processing operation deleteBlog
+[INFO] 'host' (OAS 2.0) or 'servers' (OAS 3.0) not defined in the spec. Default to [http://localhost] for server URL [http://localhost/api/v1]
+[INFO] 'host' (OAS 2.0) or 'servers' (OAS 3.0) not defined in the spec. Default to [http://localhost] for server URL [http://localhost/api/v1]
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\model\BlogDetail.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\model\BlogDetail.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\model\BlogDetailPaginated.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\model\BlogDetailPaginated.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\model\BlogRequest.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\model\BlogRequest.java
+[INFO] 'host' (OAS 2.0) or 'servers' (OAS 3.0) not defined in the spec. Default to [http://localhost] for server URL [http://localhost/api/v1]
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\BlogsApiController.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\BlogsApiController.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\BlogsApi.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\BlogsApi.java
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\BlogsApiDelegate.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\BlogsApiDelegate.java
+[INFO] 'host' (OAS 2.0) or 'servers' (OAS 3.0) not defined in the spec. Default to [http://localhost] for server URL [http://localhost/api/v1]
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\pom.xml (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\README.md (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\OpenApiGeneratorApplication.java (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\src\test\java\com\sample\sampleservice\feature\blog\OpenApiGeneratorApplicationTests.java (Skipped by supportingFiles options supplied by user.)
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\RFC3339DateFormat.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\RFC3339DateFormat.java
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\src\main\resources\application.properties (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\HomeController.java (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\src\main\resources\openapi.yaml (Skipped by supportingFiles options supplied by user.)
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\SpringDocConfiguration.java (Skipped by supportingFiles options supplied by user.)
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\ApiUtil.java
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\generated-sources\openapi\com\sample\sampleservice\feature\blog\api\rest\v1\ApiUtil.java
+[INFO] Skipped C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator-ignore (Skipped by supportingFiles options supplied by user.)
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator\VERSION
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator\VERSION
+[INFO] writing file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator\FILES
+[INFO] skip overwrite of file C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\.openapi-generator\FILES
+################################################################################
+# Thanks for using OpenAPI Generator.                                          #
+# Please consider donation to help us maintain this project 🙏                 #
+# https://opencollective.com/openapi_generator/donate                          #
+################################################################################
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ sample-service ---
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] Copying 8 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ sample-service ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 177 source files to C:\Users\HP\Desktop\files\just_a_proejct\simple blog app\target\classes
+[INFO] /C:/Users/HP/Desktop/files/just_a_proejct/simple blog app/target/generated-sources/openapi/com/sample/sampleservice/feature/auth/api/rest/v1/model/UserDetail.java: Some input files use or override a deprecated API.
+[INFO] /C:/Users/HP/Desktop/files/just_a_proejct/simple blog app/target/generated-sources/openapi/com/sample/sampleservice/feature/auth/api/rest/v1/model/UserDetail.java: Recompile with -Xlint:deprecation for details.
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/HP/Desktop/files/just_a_proejct/simple blog app/src/main/java/com/sample/sampleservice/feature/blog/infrastructure/primary/rest/v1/BlogDelegateApiImpl.java:[30,5] method does not override or implement a method from a supertype
+[ERROR] /C:/Users/HP/Desktop/files/just_a_proejct/simple blog app/src/main/java/com/sample/sampleservice/feature/blog/infrastructure/primary/rest/v1/BlogDelegateApiImpl.java:[43,50] incompatible types: long cannot be converted to java.lang.Integer
+[ERROR] /C:/Users/HP/Desktop/files/just_a_proejct/simple blog app/src/main/java/com/sample/sampleservice/feature/blog/application/BlogApplicationService.java:[42,54] cannot find symbol
+  symbol:   method notFound(com.sample.sampleservice.feature.blog.domain.exception.BlogErrorKey)
+  location: class com.sample.sampleservice.shared.error.domain.GeneratorException
+[INFO] 3 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.509 s
+[INFO] Finished at: 2026-01-09T16:47:02+03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project sample-service: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/HP/Desktop/files/just_a_proejct/simple blog app/src/main/java/com/sample/sampleservice/feature/blog/infrastructure/primary/rest/v1/BlogDelegateApiImpl.java:[30,5] method does not override or implement a method from a supertype
+[ERROR] /C:/Users/HP/Desktop/files/just_a_proejct/simple blog app/src/main/java/com/sample/sampleservice/feature/blog/infrastructure/primary/rest/v1/BlogDelegateApiImpl.java:[43,50] incompatible types: long cannot be converted to java.lang.Integer
+[ERROR] /C:/Users/HP/Desktop/files/just_a_proejct/simple blog app/src/main/java/com/sample/sampleservice/feature/blog/application/BlogApplicationService.java:[42,54] cannot find symbol
+[ERROR]   symbol:   method notFound(com.sample.sampleservice.feature.blog.domain.exception.BlogErrorKey)
+[ERROR]   location: class com.sample.sampleservice.shared.error.domain.GeneratorException
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

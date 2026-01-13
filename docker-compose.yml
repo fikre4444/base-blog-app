@@ -1,0 +1,20 @@
+services:
+  sample-service:
+    container_name: sample-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sample-service:latest  
+    environment:     
+      # - SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/sample_db
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/blog_db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=psql
+      - SPRING_PROFILES_ACTIVE=dev
+    ports:
+      - "8085:8085"
+    networks:
+      - sample-net
+networks:
+  sample-net:
+    external: true
