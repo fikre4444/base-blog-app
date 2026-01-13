@@ -39,6 +39,21 @@ public class BlogRepositoryServiceImpl implements BlogRepository {
 
         org.springframework.data.domain.Page<BlogEntity> result = blogEntityRepository.findAll(springPageable);
 
+        return mapPage(result);
+    }
+
+    @Override
+    public Page<Blog> findByUserId(String userId, Pageable pageable) {
+        Sort sort = Sort.by(Sort.Direction.DESC, "createdAt");
+        PageRequest springPageable = PageRequest.of(pageable.getPage() - 1, pageable.getPageSize(), sort);
+
+        org.springframework.data.domain.Page<BlogEntity> result = blogEntityRepository.findAllByUserId(userId,
+                springPageable);
+
+        return mapPage(result);
+    }
+
+    private Page<Blog> mapPage(org.springframework.data.domain.Page<BlogEntity> result) {
         return new Page<Blog>()
                 .content(result.getContent().stream().map(blogEntityMapper::toDomain).toList())
                 .currentPage(result.getNumber() + 1)

@@ -13,5 +13,7 @@ public interface BlogRepository {
 
     Page<Blog> findAll(Pageable pageable);
 
+    Page<Blog> findByUserId(String userId, Pageable pageable);
+
     void deleteById(String id);
 }

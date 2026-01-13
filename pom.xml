@@ -488,6 +488,54 @@
                             </configOptions>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>comment-api-v1</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>src/main/resources/openapi/comment-spec.1.0.0.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <skipOverwrite>true</skipOverwrite>
+                            <modelPackage>
+                                com.sample.sampleservice.feature.comment.api.rest.v1.model
+                            </modelPackage>
+                            <apiPackage>com.sample.sampleservice.feature.comment.api.rest.v1
+                            </apiPackage>
+                            <output>${project.basedir}</output>
+                            <supportingFilesToGenerate>
+                                ApiUtil.java,RFC3339DateFormat.java
+                            </supportingFilesToGenerate>
+                            <configOptions>
+                                <useBeanValidation>true</useBeanValidation>
+                                <useSwaggerAnnotations>true</useSwaggerAnnotations>
+                                <useTags>true</useTags>
+                                <returnResponse>true</returnResponse>
+                                <openApiSpecFileLocation>.openapi-generator/generated-spec.yaml
+                                </openApiSpecFileLocation>
+                                <useJakartaEe>true</useJakartaEe>
+                                <dateLibrary>java8-zoneddatetime</dateLibrary>
+                                <sourceFolder>target/generated-sources/openapi</sourceFolder>
+                                <basePackage>com.sample.sampleservice.feature.comment</basePackage>
+                                <configPackage>com.sample.sampleservice.feature.comment
+                                </configPackage>
+                                <invokerPackage>
+                                    com.sample.sampleservice.feature.comment.api.rest.v1
+                                </invokerPackage>
+                                <hideGenerationTimestamp>true</hideGenerationTimestamp>
+                                <delegatePattern>true</delegatePattern>
+                                <library>spring-boot</library>
+                                <serializationLibrary>jackson</serializationLibrary>
+                                <serializableModel>true</serializableModel>
+                                <useSpringBoot3>true</useSpringBoot3>
+                                <useSpringController>true</useSpringController>
+                                <useOptional>true</useOptional>
+                                <useLombok>true</useLombok>
+                                <useLombok3>true</useLombok3>
+                                <test>false</test>
+                            </configOptions>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>

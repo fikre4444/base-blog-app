@@ -67,4 +67,26 @@ public class BlogDelegateApiImpl implements BlogsApiDelegate {
         blogApplicationService.deleteBlog(id);
         return ResponseEntity.noContent().build();
     }
+
+    @Override
+    public ResponseEntity<BlogDetailPaginated> getBlogsByUserId(String userId, Optional<Integer> page,
+            Optional<Integer> limit) {
+        Pageable pageable = Pageable.builder()
+                .page(page.orElse(1))
+                .pageSize(limit.orElse(20))
+                .build();
+
+        Page<Blog> blogs = blogApplicationService.getBlogsByUserId(userId, pageable);
+
+        BlogDetailPaginated response = new BlogDetailPaginated()
+                .contents(blogModelMapper.toDto(blogs.getContent()))
+                .total(blogs.getTotal())
+                .totalPages(blogs.getTotalPages())
+                .currentPage((int) blogs.getCurrentPage())
+                .hasNext(blogs.isHasNext())
+                .hasPrevious(blogs.isHasPrevious())
+                .isLast(blogs.isLast());
+
+        return ResponseEntity.ok(response);
+    }
 }

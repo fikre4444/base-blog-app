@@ -1,0 +1,119 @@
+openapi: 3.0.3
+info:
+  title: Comment API
+  description: API for managing comments on blogs
+  version: 1.0.0
+servers:
+  - url: /api/v1
+    description: Comment API server
+
+tags:
+  - name: Comments
+    description: Operations for Comments
+
+paths:
+  /comments:
+    post:
+      tags:
+        - Comments
+      summary: Create a new comment
+      operationId: createComment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CommentRequest'
+      responses:
+        '201':
+          description: Comment created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommentDetail'
+        '400':
+          description: Bad request
+
+  /comments/blog/{blogId}:
+    get:
+      tags:
+        - Comments
+      summary: Get comments for a blog
+      operationId: getCommentsByBlogId
+      parameters:
+        - name: blogId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommentDetailPaginated'
+
+components:
+  schemas:
+    CommentRequest:
+      type: object
+      required:
+        - blog_id
+        - message
+      properties:
+        blog_id:
+          type: string
+        message:
+          type: string
+        reply_comment_id:
+          type: string
+    CommentDetail:
+      type: object
+      properties:
+        id:
+          type: string
+        user_id:
+          type: string
+        blog_id:
+          type: string
+        message:
+          type: string
+        reply_comment_id:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    CommentDetailPaginated:
+      type: object
+      properties:
+        contents:
+          type: array
+          items:
+            $ref: '#/components/schemas/CommentDetail'
+        total:
+          type: integer
+          format: int64
+        total_pages:
+          type: integer
+        current_page:
+          type: integer
+        has_next:
+          type: boolean
+        has_previous:
+          type: boolean
+        is_last:
+          type: boolean

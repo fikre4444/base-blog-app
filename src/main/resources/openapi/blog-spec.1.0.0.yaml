@@ -123,6 +123,36 @@ paths:
         '404':
           description: Blog not found
 
+  /blogs/user/{userId}:
+    get:
+      tags:
+        - Blogs
+      summary: Get blogs by user ID
+      operationId: getBlogsByUserId
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BlogDetailPaginated'
+
 components:
   schemas:
     BlogRequest:

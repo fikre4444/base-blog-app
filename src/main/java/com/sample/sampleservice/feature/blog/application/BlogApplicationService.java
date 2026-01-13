@@ -34,7 +34,12 @@ public class BlogApplicationService {
     }
 
     public Page<Blog> getBlogs(Pageable pageable) {
-        return blogRepository.findAll(pageable);
+        String userId = AuthenticatedUser.getUser().id();
+        return blogRepository.findByUserId(userId, pageable);
+    }
+
+    public Page<Blog> getBlogsByUserId(String userId, Pageable pageable) {
+        return blogRepository.findByUserId(userId, pageable);
     }
 
     public Blog getBlog(String id) {

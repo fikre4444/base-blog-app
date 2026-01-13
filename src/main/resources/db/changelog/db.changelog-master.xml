@@ -6,5 +6,6 @@
     <include file="db/changelog/changes/initial.xml" relativeToChangelogFile="false" />    
     <include file="db/changelog/changes/20251216114302_changelog.xml" relativeToChangelogFile="false" />    
     <include file="db/changelog/changes/20260109141323_changelog.xml" relativeToChangelogFile="false" />
+    <include file="db/changelog/changes/20260113160000_changelog.xml" relativeToChangelogFile="false" />
 
 </databaseChangeLog>
