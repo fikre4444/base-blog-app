@@ -64,6 +64,28 @@ paths:
               schema:
                 $ref: '#/components/schemas/CommentDetailPaginated'
 
+  /comments/reply:
+    post:
+      tags:
+        - Comments
+      summary: Reply to a comment
+      operationId: replyToComment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReplyRequest'
+      responses:
+        '201':
+          description: Reply created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommentDetail'
+        '400':
+          description: Bad request
+
 components:
   schemas:
     CommentRequest:
@@ -117,3 +139,13 @@ components:
           type: boolean
         is_last:
           type: boolean
+    ReplyRequest:
+      type: object
+      required:
+        - comment_id
+        - message
+      properties:
+        comment_id:
+          type: string
+        message:
+          type: string

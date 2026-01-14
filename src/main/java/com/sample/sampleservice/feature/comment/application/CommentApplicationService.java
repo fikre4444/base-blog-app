@@ -34,6 +34,22 @@ public class CommentApplicationService {
         return commentRepository.save(comment);
     }
 
+    @Transactional
+    public Comment replyToComment(String parentCommentId, String message) {
+        Comment parentComment = getComment(parentCommentId);
+        String userId = AuthenticatedUser.getUser().id();
+
+        Comment reply = Comment.builder()
+                .userId(userId)
+                .blogId(parentComment.getBlogId())
+                .message(message)
+                .replyCommentId(parentCommentId)
+                .createdAt(ZonedDateTime.now())
+                .build();
+
+        return commentRepository.save(reply);
+    }
+
     public Page<Comment> getCommentsByBlogId(String blogId, Pageable pageable) {
         return commentRepository.findByBlogId(blogId, pageable);
     }
