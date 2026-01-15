@@ -7,6 +7,8 @@ import com.sample.sampleservice.feature.comment.infrastructure.secondary.mapper.
 import com.sample.sampleservice.shared.pagination.domain.Page;
 import com.sample.sampleservice.shared.pagination.domain.Pageable;
 import lombok.RequiredArgsConstructor;
+
+import org.hibernate.query.SortDirection;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;
@@ -40,6 +42,22 @@ public class CommentRepositoryServiceImpl implements CommentRepository {
         org.springframework.data.domain.Page<CommentEntity> result = commentEntityRepository.findAllByBlogId(blogId,
                 springPageable);
 
+        return new Page<Comment>()
+                .content(result.getContent().stream().map(commentEntityMapper::toDomain).toList())
+                .currentPage(result.getNumber() + 1)
+                .total((int) result.getTotalElements())
+                .totalPages(result.getTotalPages())
+                .hasNext(result.hasNext())
+                .hasPrevious(result.hasPrevious())
+                .isLast(result.isLast());
+    }
+
+    @Override
+    public Page<Comment> findReplyCommentByCommentId(String commentId, Pageable pageable) {
+        Sort sort = Sort.by(Sort.Direction.ASC, "createdAt");
+        PageRequest springPageable = PageRequest.of(pageable.getPage() - 1, pageable.getPageSize(), sort);
+        org.springframework.data.domain.Page<CommentEntity> result = commentEntityRepository.findReplyCommentByCommentId(commentId,
+                springPageable);
         return new Page<Comment>()
                 .content(result.getContent().stream().map(commentEntityMapper::toDomain).toList())
                 .currentPage(result.getNumber() + 1)

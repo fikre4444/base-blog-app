@@ -13,5 +13,7 @@ public interface CommentRepository {
 
     Page<Comment> findByBlogId(String blogId, Pageable pageable);
 
+    Page<Comment> findReplyCommentByCommentId(String commentId, Pageable pageable);
+
     void deleteById(String id);
 }

@@ -62,4 +62,26 @@ public class CommentDelegateApiImpl implements CommentsApiDelegate {
 
                 return ResponseEntity.ok(response);
         }
+
+        @Override
+        public ResponseEntity<CommentDetailPaginated> getReplyCommentsByCommentId(String commentId, Optional<Integer> page,
+            Optional<Integer> limit) {
+                Pageable pageable = Pageable.builder()
+                    .page(page.orElse(1))
+                    .pageSize(limit.orElse(20))
+                    .build();
+                
+                Page<Comment> comments = commentApplicationService.getReplyCommentByCommentId(commentId, pageable);
+                CommentDetailPaginated response = new CommentDetailPaginated()
+                                .contents(commentModelMapper.toDto(comments.getContent()))
+                                .total(comments.getTotal())
+                                .totalPages(comments.getTotalPages())
+                                .currentPage((int) comments.getCurrentPage())
+                                .hasNext(comments.isHasNext())
+                                .hasPrevious(comments.isHasPrevious())
+                                .isLast(comments.isLast());
+                
+                return ResponseEntity.ok(response);                                
+        }
+
 }

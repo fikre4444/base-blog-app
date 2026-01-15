@@ -54,6 +54,10 @@ public class CommentApplicationService {
         return commentRepository.findByBlogId(blogId, pageable);
     }
 
+    public Page<Comment> getReplyCommentByCommentId(String commentId, Pageable pageable) {
+        return commentRepository.findReplyCommentByCommentId(commentId, pageable);
+    }
+
     public Comment getComment(String id) {
         return commentRepository.findById(id)
                 .orElseThrow(() -> GeneratorException.badRequest(CommentErrorKey.COMMENT_NOT_FOUND).build());
