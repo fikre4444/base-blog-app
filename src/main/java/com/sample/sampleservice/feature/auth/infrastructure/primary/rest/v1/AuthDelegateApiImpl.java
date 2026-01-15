@@ -133,7 +133,7 @@ public class AuthDelegateApiImpl implements AuthsApiDelegate {
         var createdUser = userApplicationService.createUser(
             createUserBo, 
             Role.USER.roleName(),
-            false
+            true
         );
 
         return ResponseEntity
