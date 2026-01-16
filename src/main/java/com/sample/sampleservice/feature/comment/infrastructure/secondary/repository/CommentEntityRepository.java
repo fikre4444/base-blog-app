@@ -11,6 +11,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CommentEntityRepository
         extends JpaRepository<CommentEntity, String>, JpaSpecificationExecutor<CommentEntity> {
+    
+    @Query("SELECT c FROM CommentEntity c WHERE c.blogId = ?1 AND c.replyCommentId IS NULL")
     Page<CommentEntity> findAllByBlogId(String blogId, Pageable pageable);
 
     @Query("SELECT c FROM CommentEntity c WHERE c.replyCommentId = ?1")
